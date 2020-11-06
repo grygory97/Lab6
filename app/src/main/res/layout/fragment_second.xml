@@ -11,30 +11,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_second_fragment"
-        app:layout_constraintBottom_toTopOf="@+id/button_next"
+        app:layout_constraintBottom_toTopOf="@+id/button2_next"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/button2_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:text="@string/next"
-        app:layout_constraintBottom_toTopOf="@+id/button_previous"
+        app:layout_constraintBottom_toTopOf="@+id/button2_previous"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_second" />
 
     <Button
-        android:id="@+id/button_previous"
+        android:id="@+id/button2_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_next" />
+        app:layout_constraintTop_toBottomOf="@+id/button2_next" />
 </androidx.constraintlayout.widget.ConstraintLayout>
