@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="lh.grzegorzszawula.lab5.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="20"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_finish"
+        android:orderInCategory="30"
+        android:title="@string/finish_app"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_info"
+        android:orderInCategory="10"
+        android:title="@string/info_autor"
+        app:showAsAction="never"/>
+</menu>

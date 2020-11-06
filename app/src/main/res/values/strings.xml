@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="info_autor">Informacje o autorze</string>
+    <string name="finish_app">Zamknij app</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Następny</string>
+    <string name="previous">Poprzedni</string>
+
+    <string name="hello_first_fragment">Pierwszy fragment</string>
+    <string name="hello_second_fragment">Drugi fragment</string>
+    <string name="hello_third_fragment">Trzeci fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
