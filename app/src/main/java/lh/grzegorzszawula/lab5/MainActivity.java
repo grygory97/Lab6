@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        switch (id) {
+
+        /*switch (id) {
             case R.id.action_info:
                 Snackbar.make(this.findViewById(R.id.action_info), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
                 return true;
@@ -58,9 +59,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }
+        }*/
+
         //noinspection SimplifiableIfStatement
-      /*  if (id == R.id.action_settings) {
+
+       /* if (id == R.id.action_settings) {
             Snackbar.make(this.findViewById(R.id.action_settings), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
             return true;
         }
@@ -73,5 +76,19 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);*/
+
+        if (id == R.id.action_settings) {
+            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_finish) {
+            Snackbar.make(findViewById(R.id.id_layout), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_info) {
+            Snackbar.make(findViewById(R.id.id_layout), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
