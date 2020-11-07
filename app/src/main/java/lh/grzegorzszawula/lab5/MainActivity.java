@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -46,11 +47,48 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        /*switch (id) {
+            case R.id.action_info:
+                Snackbar.make(this.findViewById(R.id.action_info), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
+                return true;
+            case R.id.action_settings:
+                Snackbar.make(this.findViewById(R.id.action_settings), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
+                return true;
+            case R.id.action_finish:
+                Snackbar.make(this.findViewById(R.id.action_finish), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }*/
+
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+
+       /* if (id == R.id.action_settings) {
+            Snackbar.make(this.findViewById(R.id.action_settings), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
             return true;
         }
+        if (id == R.id.action_finish) {
+            Snackbar.make(this.findViewById(R.id.action_finish), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_info) {
+            Snackbar.make(this.findViewById(R.id.action_info), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);*/
 
+        if (id == R.id.action_settings) {
+            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_finish) {
+            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_info) {
+            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }

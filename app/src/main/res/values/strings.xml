@@ -1,11 +1,16 @@
 <resources>
+    <!-- Strings used for menu -->
     <string name="app_name">Lab5</string>
-    <string name="action_settings">Ustawienia</string>
+    <string name="settings">Ustawienia</string>
     <string name="info_autor">Informacje o autorze</string>
     <string name="finish_app">Zamknij app</string>
+    <string name="snackbar_settings">O klikłeś w ustawienia</string>
+    <string name="snackbar_finish_app">Czemu chcesz mnie zamknąć</string>
+    <string name="snackbar_info_autor">A autor to JA</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="third_fragment_label">Third Fragment</string>
     <string name="next">Następny</string>
     <string name="previous">Poprzedni</string>
 

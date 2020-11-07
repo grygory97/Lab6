@@ -10,18 +10,16 @@
         android:id="@+id/textview_third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@+id/button_previous"
+        android:text="@string/hello_third_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/button3_previous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_previous"
+        android:id="@+id/button3_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/button"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"
