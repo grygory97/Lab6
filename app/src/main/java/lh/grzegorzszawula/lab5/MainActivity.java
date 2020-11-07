@@ -82,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.action_finish) {
-            Snackbar.make(findViewById(R.id.id_layout), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
             return true;
         }
         if (id == R.id.action_info) {
-            Snackbar.make(findViewById(R.id.id_layout), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
             return true;
         }
         return super.onOptionsItemSelected(item);
