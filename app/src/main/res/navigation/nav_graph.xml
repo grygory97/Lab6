@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -37,5 +40,13 @@
         <action
             android:id="@+id/action_ThirdFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_ThirdFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
+    <action android:id="@+id/action_show_f1" app:destination="@+id/FirstFragment"></action>
+    <action android:id="@+id/action_show_f2" app:destination="@+id/SecondFragment"></action>
+    <action android:id="@+id/action_show_f3" app:destination="@+id/ThirdFragment"></action>
+
+
 </navigation>

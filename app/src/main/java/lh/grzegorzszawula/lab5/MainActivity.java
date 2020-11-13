@@ -1,17 +1,24 @@
 package lh.grzegorzszawula.lab5;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +35,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                //TODO:zmiana koloru on fly dla widocznego fragmentu
+               /* FragmentManager fragment = (FragmentManager) getFragmentManager().
+                        findFragmentById(R.id.nav_host_fragment);
+                if (fragment==null) {
+                    fragment.getView().setBackgroundColor();
+                }
+                }*/
+            }
+
+            public int getRandomColor() {
+                Random rnd = new Random();
+                return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
             }
         });
     }
@@ -47,48 +66,27 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        /*switch (id) {
+        switch (id) {
+            case R.id.action_frag1:
+                NavHostFragment.findNavController(getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).navigate(R.id.action_show_f1);
+                return true;
+            case R.id.action_frag2:
+                NavHostFragment.findNavController(getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).navigate(R.id.action_show_f2);
+                return true;
+            case R.id.action_frag3:
+                NavHostFragment.findNavController(getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).navigate(R.id.action_show_f3);
+                return true;
             case R.id.action_info:
-                Snackbar.make(this.findViewById(R.id.action_info), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
                 return true;
             case R.id.action_settings:
-                Snackbar.make(this.findViewById(R.id.action_settings), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
                 return true;
             case R.id.action_finish:
-                Snackbar.make(this.findViewById(R.id.action_finish), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }*/
-
-        //noinspection SimplifiableIfStatement
-
-       /* if (id == R.id.action_settings) {
-            Snackbar.make(this.findViewById(R.id.action_settings), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
-            return true;
         }
-        if (id == R.id.action_finish) {
-            Snackbar.make(this.findViewById(R.id.action_finish), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
-            return true;
-        }
-        if (id == R.id.action_info) {
-            Snackbar.make(this.findViewById(R.id.action_info), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);*/
-
-        if (id == R.id.action_settings) {
-            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_settings), Snackbar.LENGTH_LONG).show();
-            return true;
-        }
-        if (id == R.id.action_finish) {
-            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_finish_app), Snackbar.LENGTH_LONG).show();
-            return true;
-        }
-        if (id == R.id.action_info) {
-            Snackbar.make(this.findViewById(R.id.id_layout), getText(R.string.snackbar_info_autor), Snackbar.LENGTH_LONG).show();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

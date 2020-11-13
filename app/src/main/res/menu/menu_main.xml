@@ -11,10 +11,26 @@
         android:id="@+id/action_finish"
         android:orderInCategory="30"
         android:title="@string/finish_app"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_info"
         android:orderInCategory="10"
         android:title="@string/info_autor"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_frag1"
+        android:orderInCategory="01"
+        android:title="@string/frag1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_frag2"
+        android:orderInCategory="02"
+        android:title="@string/frag2"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_frag3"
+        android:orderInCategory="03"
+        android:title="@string/frag3"
+        app:showAsAction="never" />
+
 </menu>
