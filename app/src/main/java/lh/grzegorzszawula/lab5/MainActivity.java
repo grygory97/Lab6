@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +44,31 @@ public class MainActivity extends AppCompatActivity {
                     fragment.getView().setBackgroundColor();
                 }
                 }*/
+
+                FragmentManager f=getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment).getChildFragmentManager();
+                List<Fragment> frag=f.getFragments();
+                String str="";
+                for (Fragment fragment : frag)
+                {
+                    if(fragment.isVisible())
+                    {
+                        fragment.getView().setBackgroundColor(getRandomColor());
+                        str=fragment.getChildFragmentManager().toString();
+                        if(fragment.getChildFragmentManager().toString().contains("SecondFragment"))
+                        {
+                            str="SecondFragment";
+                        }
+                        if(fragment.getChildFragmentManager().toString().contains("FirstFragment"))
+                        {
+                            str="FirstFragment";
+                        }
+                        if(fragment.getChildFragmentManager().toString().contains("ThirdFragment"))
+                        {
+                            str="ThirdFragment";
+
+                        }
+                    }
+                }
             }
 
             public int getRandomColor() {
